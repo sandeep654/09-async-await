@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in JS</title>
+</head>
+<body>
+<h2>Learning what? JavaScript idiot</h2>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+</body>
+<script>
+
+    const ReOutput = function(){
+        console.log("Hello World",Date.now());
+    }
+    
+    // let plsStopp = setInterval(ReOutput,1000)
+
+   const StartCon = function(){
+        if(plsStopp == null)
+        plsStopp = setInterval(ReOutput,2000)
+        console.log('start')
+    }
+
+    const StopCon = function(){
+        clearInterval(plsStopp)
+        console.log("finally stop")
+    }
+
+   document.querySelector('#start').addEventListener('click',StartCon)
+
+    // clearInterval(ReOutput)
+
+   document.querySelector('#stop').addEventListener('click',StopCon)
+   plsStopp=null
+
+    // document.querySelector('#stop').addEventListener('click',function(){
+    //     clearInterval(stopPls)
+    //     console.log("stopped")
+    // })
+
+
+ 
+</script>
+
+</html>

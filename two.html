@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in JS</title>
+</head>
+<body>
+<h1>Hello friends, I am Sandeep</h1>
+<button id="stop">Cancel</button>
+</body>
+
+<script>
+    setTimeout(function(){
+        console.log("Hello friends, I am Sandeep");
+    }, 2000);
+
+    // setInterval(function(){
+    //     console.log("sandeep is the best person . I am with whatever I have and I am learning for more")
+    // }, 1000);
+
+   const changeText = function (){
+    document.querySelector('h1').innerHTML
+    = "Best JS series"
+   }
+
+   const changeMe = setTimeout(changeText,2000)
+
+//    clearTimeout(changeMe)
+
+document.querySelector('#stop').addEventListener('click',function() {
+    clearTimeout(changeMe)
+    console.log("Stopped");
+})
+</script>
+</html>
